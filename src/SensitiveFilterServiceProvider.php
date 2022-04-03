@@ -29,8 +29,6 @@ class SensitiveFilterServiceProvider extends ServiceProvider
 
     public function registerRoute()
     {
-        Route::prefix('sensitive')->middleware('api')->group(function () {
-            $this->loadRoutesFrom(__DIR__.'/route.php');
-        });
+        $this->loadRoutesFrom(__DIR__.'/route.php');
     }
 }
