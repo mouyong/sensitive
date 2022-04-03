@@ -1,0 +1,24 @@
+{
+    "name": "mouyong/sensitive",
+    "description": "Laravel Sensitive package",
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Mouyong\\Sensitive\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mouyong",
+            "email": "my24251325@gmail.com"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mouyong\\Sensitive\\SensitiveFilterServiceProvider"
+            ]
+        }
+    }
+}
