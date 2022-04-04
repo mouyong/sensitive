@@ -1,6 +1,6 @@
 <?php
 
-namespace Mouyong\Sensitive;
+namespace Mouyong\Sensitive\Services;
 
 /**
  * Class SensitiveFilter.
@@ -25,7 +25,7 @@ class SensitiveFilter
 
     public function __construct()
     {
-        $this->buildTreeFromFile(__DIR__.'/SensitiveWords.txt');
+        $this->buildTreeFromFile(__DIR__.'/../SensitiveWords.txt');
     }
 
     /**
@@ -40,6 +40,7 @@ class SensitiveFilter
         if (!file_exists($filePath)) {
             \abort(404, '词库文件不存在');
         }
+
         // 词库树初始化
         $this->wordTree = new HashMap();
 

@@ -1,8 +1,7 @@
 <?php
 
-namespace Mouyong\Sensitive;
+namespace Mouyong\Sensitive\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class SensitiveFilterServiceProvider extends ServiceProvider
@@ -15,6 +14,7 @@ class SensitiveFilterServiceProvider extends ServiceProvider
     public function register()
     {
         $this->registerRoute();
+        $this->registerMigration();
     }
 
     /**
@@ -29,6 +29,11 @@ class SensitiveFilterServiceProvider extends ServiceProvider
 
     public function registerRoute()
     {
-        $this->loadRoutesFrom(__DIR__.'/route.php');
+        $this->loadRoutesFrom(__DIR__.'/../routes/route.php');
+    }
+
+    public function registerMigration()
+    {
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
     }
 }

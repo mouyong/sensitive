@@ -1,6 +1,6 @@
 <?php
 
-namespace Mouyong\Sensitive;
+namespace Mouyong\Sensitive\Services;
 
 /**
  * Class HashMap.

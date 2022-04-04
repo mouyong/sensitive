@@ -10,14 +10,24 @@
     "authors": [
         {
             "name": "mouyong",
-            "email": "my24251325@gmail.com"
+            "email": "my24251325@gmail.com",
+            "homepage": "https://github.com/mouyong",
+            "role": "Creator"
         }
     ],
-    "require": {},
+    "support": {
+        "source": "https://github.com/mouyong/sensitive",
+        "homepage": "https://github.com/mouyong/sensitive",
+        "issues": "https://github.com/mouyong/issues"
+    },
+    "require": {
+        "zhenmu/support": "^1.0"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "Mouyong\\Sensitive\\SensitiveFilterServiceProvider"
+                "Mouyong\\Sensitive\\Providers\\SensitiveFilterServiceProvider",
+                "Mouyong\\Sensitive\\Providers\\EventServiceProvider"
             ]
         }
     }
